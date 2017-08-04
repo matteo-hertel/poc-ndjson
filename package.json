@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Matteo Hertel <info@matteohertel.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts:{
+    "start" : "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
