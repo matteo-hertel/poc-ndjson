@@ -25,7 +25,7 @@ app.get('/api', (req, res) => {
     }, 100);
   });
 });
-
-app.listen(3321, () => {
-  console.log('Example app listening on port 3321!');
+let port = process.env.SERVER_PORT || 3321
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`);
 });
