@@ -6,7 +6,7 @@ const ndjson = require("ndjson");
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   let readStream = fs.createReadStream(__dirname + '/todos.ndjson').pipe(ndjson.parse());
 
   const chunks = [];
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
         clearInterval(id);
         res.end();
       }
-    }, 500);
+    }, 100);
   });
 });
 
